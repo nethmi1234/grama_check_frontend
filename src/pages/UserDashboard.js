@@ -1,18 +1,21 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import "../App.css"
+import Header from '../components/Header';
 
 export default function UserDashboard() {
   return (
-    <div className="container">
+    <div>
+        <Header/>
+        
+        <div className="container">
         <form className="form">
             <div className="content">
-                {/* <div className="notification">
-                    
-                </div> */}
 
                 <div className="buttons">
-                    <button className="submitbtn">Apply for Grama certificate</button>
+                    <Link to="/user/apply">
+                        <button className="submitbtn">Apply for Grama certificate</button>
+                    </Link> 
                 </div>
 
                 <div className="buttons">
@@ -21,13 +24,11 @@ export default function UserDashboard() {
                     </Link>
                 </div>
 
-                <div className="buttons">
-                    <button className="submitbtn">Help</button>
-                </div>
+                <div style = {{paddingBottom: "100px"}}></div>
 
             </div>
         </form>
-
+        </div>
     </div>
   )
 }
